@@ -1,0 +1,19 @@
+#ignore documentation dirs
+notes
+versionBackup
+
+#ignore data
+data
+demo_recordings
+
+
+#ignore OS-, language-, and IDE- specific output
+__pycache__
+.vscode
+
+
+#ignore script output; these dirs should be automatically created when you run the scripts
+JM_areaBasedAlignment_output
+JM_automatedTracking_multipleObject_output
+JM_binarizationTest_output
+SNCI_track_autotrack_output
