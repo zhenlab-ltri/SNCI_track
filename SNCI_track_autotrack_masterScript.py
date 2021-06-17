@@ -49,7 +49,7 @@ from SNCI_track_autotrackGUI import autotrackGUI
 ##########01 define arguments##############################
 
 #define input video for streaming
-path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//JM_areaBasedAlignment_output'
+path = './/JM_areaBasedAlignment_output'
 fileName = 'temp27_aligned'
 filePath = path + '//' + fileName + '.avi'
 
@@ -295,17 +295,11 @@ bp = None
 
 
 
-'''
+'''   
 problems
 
-    gui.frameList.type() == uint8
-    gui.frameList_backup.type() == uint8
-
-        in old script, you read in original .tif stack and performed slicing on those
-        i suggest you do that again
-
-        
-    
+    gui does not close
+        user needs to click close button on window three times to generate correct file
 
 
 to do; polishing
@@ -317,8 +311,6 @@ to do; polishing
     automatically output a readme.txt showing input parameters
         e.g. use_somaShape
         e.g. cvrg
-
-
 '''
 
 
