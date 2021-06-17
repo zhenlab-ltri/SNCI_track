@@ -51,14 +51,16 @@ filePath = path + '//' + fileName + '.tif'
 inputStack = io.imread(filePath)
 frame01 = inputStack[0, :, :]
 
-path = './' + 'JM_areaBasedAlignment_output//' + 'testFrameResults' 
-outputDir = fileName.split('.')[0]
-outputPath = path + '//' + outputDir
-
-
+path = './' + 'JM_areaBasedAlignment_output'
 if os.path.isdir(path) == False:
     os.mkdir(path)
 
+path = path + '//testFrameResults'
+if os.path.isdir(path) == False:
+    os.mkdir(path)
+
+outputDir = fileName.split('.')[0]
+outputPath = path + '//' + outputDir
 if os.path.isdir(outputPath) == False:
     os.mkdir(outputPath)
 
