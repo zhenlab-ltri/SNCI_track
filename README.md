@@ -31,7 +31,7 @@ Align GCaMP and RFP channels, autotrack, and generate traces for C. elegans smal
 1. align GFP and RFP channels
     - save input video as single .tif
     - open JM_areaBasedAlignment.py in python IDE of choice (e.g. VScode)
-    - follow instructions in script's section 01 doc string
+    - follow instructions in JM_area_based_alignment.py's section 01 doc string
     - run
 
     - check alignment result test frame; automatically writes to SNCI_track/JM_areaBasedAlignmentOutput/testFrameResults/
@@ -55,17 +55,18 @@ Align GCaMP and RFP channels, autotrack, and generate traces for C. elegans smal
     - e.g. fileName = 'temp2_aligned'
 
     - set list_neuronID to contain the names of your neurons in the order you plan to track them
-    - e.g. list_neuronID = ['AVA']                #if planning to track only AVA in that run
-    - e.g. list_neuronID = ['AVA', 'AVG', 'AVB']  #if planning to track all 3 somas in that run; not reccommended
-    - e.g. list_neuronID = ['neuron1']            #if neuron name not known
+    - e.g. list_neuronID = ['AVA']                          #if planning to track only AVA in that run
+    - e.g. list_neuronID = ['AVA', 'AVG', 'AVB']            #if planning to track all 3 somas in that run
+    - e.g. list_neuronID = ['neuron1']                      #if neuron name not known
+    - e.g. list_neuronID = ['neuron1', 'neuron2', #etc...]  #if planning to track multiple somas and names not known
 
     - set str_tracker to tracker you want to use; 'csrt' recommended
     - e.g. str_tracker = 'csrt'
     - e.g. str_tracker = 'kcf'
     
     - set sep_chan to True or False
-    - e.g. sep_chan = True                        #if want RFP and GFP traces displayed on separate axes in final plot
-    - e.g. sep_chan = False                       #if want RFP anf GFP traces displayed on same axes in final plot
+    - e.g. sep_chan = True                                  #if want RFP and GFP traces displayed on separate axes in final plot
+    - e.g. sep_chan = False                                 #if want RFP anf GFP traces displayed on same axes in final plot
 
     - run SNCI_track_autotrack_masterScript.py
 
