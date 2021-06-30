@@ -54,16 +54,19 @@ Align GCaMP and RFP channels, autotrack, and generate traces for C. elegans smal
     * set fileName to shared name of aligned .avi and .tif files, without extension; e.g. fileName = 'temp2_aligned'
 
     - set list_neuronID to contain the names of your neurons in the order you plan to track them
-    - e.g. list_neuronID = ['AVA']                          #if planning to track only AVA in that run
-    - e.g. list_neuronID = ['AVA', 'AVG', 'AVB']            #if planning to track all 3 somas in that run
-    - e.g. list_neuronID = ['neuron1']                      #if neuron name not known
-    - e.g. list_neuronID = ['neuron1', 'neuron2', #etc...]  #if planning to track multiple somas and names not known
-
+    ```python
+    list_neuronID = ['AVA']                          #if planning to track only AVA in that run
+    list_neuronID = ['AVA', 'AVG', 'AVB']            #if planning to track all 3 somas in that run
+    list_neuronID = ['neuron1']                      #if neuron name not known
+    list_neuronID = ['neuron1', 'neuron2']           #if planning to track multiple somas and names not known
+    ```
     * set str_tracker to tracker you want to use; 'csrt' recommended; e.g. str_tracker = 'csrt'
     
     + set sep_chan to True or False
-    + e.g. sep_chan = True                                  #if want RFP and GFP traces displayed on separate axes in final plot
-    + e.g. sep_chan = False                                 #if want RFP anf GFP traces displayed on same axes in final plot
+    ```python
+    sep_chan = True #if want RFP and GFP traces displayed on separate axes in final plot
+    sep_chan = False #if want RFP anf GFP traces displayed on same axes in final plot
+    ```
 
     - run SNCI_track_autotrack_masterScript.py
 
@@ -75,9 +78,7 @@ Align GCaMP and RFP channels, autotrack, and generate traces for C. elegans smal
     
     - click Initialize ROI(s) to enter ROI draw mode; press s key to add an ROI; ROI draw window will open; always track from the left (RFP) channel; on ROI draw window, click and drag rectangular ROI around soma you want to track; press ENTER after drawing; draw window will close and ROI will be drawn on GUI as circles; draw all the ROIs around somas you want to track for that run; 1 per run currently recommended; press d key to exit ROI draw mode
     
-    + click Autotrack to enter autotrack streaming mode; video will stream to GUI; watch stream for autotacker errors
-    + e.g. #ROI balloons too large
-    + e.g. #ROI falls off soma of interest
+    + click Autotrack to enter autotrack streaming mode; video will stream to GUI; watch stream for autotacker errors; e.g. ROI balloons too large or ROI falls off soma of interest
     
     - in the event of an autotracking error, click Pause button to pause the stream; use backward and forward arrow keys to rewind to frame at which error first occurs; click Proofread ROI(s) to re-enter ROI draw mode; re-draw the ROI(s) to their correct position (press s key, click and drag, press ENTER as before); press d key to exit ROI draw mode; click Autotrack to resume autotrack streaming mode
 
