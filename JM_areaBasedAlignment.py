@@ -27,13 +27,12 @@ from skimage import io
 ##########01 align RFP to GFP channels##############################
 
 '''
-    [1] set path to where your input .tif stack is located
+    [1] set path to dir where your input .tif stack is located
             make sure path is delimited by '//' instead of escape keys
-            make sure path DOES NOT terminate in '//'
-
+            make sure path does not terminate in '//'
 
     [2] set fileName to name of your input .tif stack, without file extension (e.g. 'temp6')
-            name should not have any '.' characters in it
+            fileName should not have any '.' characters in it
 
     [3] if video is in form of individual 2D .tifs in a folder:
             open imageJ
@@ -45,8 +44,8 @@ from skimage import io
 '''
 
 #read in .tif stack as numpy.ndarray
-path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//data//2020-11_data_junM'
-fileName = 'temp27'
+path = 'C:/Users/julia/OneDrive/documents/MSc_UToronto_thesis/project_SNCI_pipeline/data/2021-07_data_wesl'
+fileName = 'temp4'
 filePath = path + '//' + fileName + '.tif'
 inputStack = io.imread(filePath)
 frame01 = inputStack[0, :, :]

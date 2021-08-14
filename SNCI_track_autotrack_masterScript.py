@@ -49,12 +49,12 @@ from SNCI_track_autotrackGUI import autotrackGUI
 ##########01 define arguments##############################
 
 #define input video for streaming
-path = './/JM_areaBasedAlignment_output'
-fileName = 'temp27_aligned'
+path = './JM_areaBasedAlignment_output'
+fileName = 'temp4_aligned'
 filePath = path + '//' + fileName + '.avi'
 
 #define neuron ID label for filenaming purposes
-list_neuronID = ['AVA']
+list_neuronID = ['AVG']
 
 #define autotrackGUI constructor arguments
 sizeCoeff = 2
@@ -66,7 +66,7 @@ somaShape_cvrg = 1.0
 somaShape_filter = 'mean'
 
 #define fluorPlot() arguments
-sep_chan = False
+sep_chan = True
 
 #define script output path
 outputPath = './' + 'SNCI_track_autotrack_output/'
@@ -298,8 +298,11 @@ bp = None
 '''   
 problems
 
-    gui does not close
+    GUI does not close
         user needs to click close button on window three times to generate correct file
+
+    tracker runs slow
+        try enabling GPU on VScode; how to do this? 
 
 
 to do; polishing
@@ -308,9 +311,16 @@ to do; polishing
 
     implement windows explorer solution to definining input data file path
 
-    automatically output a readme.txt showing input parameters
+    implement run-from-terminal functionality
+
+    implement version control w/ numbering system (start making git branches)
+
+    automatically output a .txt showing input parameters
         e.g. use_somaShape
         e.g. cvrg
+        e.g. version control
+
+    figure out how to run .py scripts from GPU / minimise RAM stick usage
 '''
 
 

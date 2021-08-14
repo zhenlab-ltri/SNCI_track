@@ -1,5 +1,5 @@
 ## SNCI_track
-Align GCaMP and RFP channels, autotrack, and generate traces for C. elegans small-number calcium imaging (SNCI) videos on a single 2D plane.
+Align GCaMP and RFP channels, autotrack, and generate traces for C. elegans small-number calcium imaging (SNCI) videos recorded from a single 2D plane.
 
 
 
@@ -29,7 +29,7 @@ Align GCaMP and RFP channels, autotrack, and generate traces for C. elegans smal
 ## Running SNCI_track
 
 1. align GFP and RFP channels
-    - save input video as single .tif
+    - ensure input video is saved as single .tif
     - open JM_areaBasedAlignment.py in python IDE of choice (e.g. VScode)
     - follow instructions in JM_area_based_alignment.py's section 01 doc string
     - run
