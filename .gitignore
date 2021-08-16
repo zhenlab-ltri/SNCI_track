@@ -3,8 +3,10 @@ notes
 versionBackup
 
 #ignore data
-data
-demo_recordings
+___data
+___demo_recordings
+___notes
+___versionBackup
 
 
 #ignore OS-, language-, and IDE- specific output
