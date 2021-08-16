@@ -44,8 +44,8 @@ from skimage import io
 '''
 
 #read in .tif stack as numpy.ndarray
-path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//___data//2020-10_data_wesl'
-fileName = 'temp4'
+path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//___data//2020-11_data_junM'
+fileName = 'temp27'
 filePath = path + '//' + fileName + '.tif'
 inputStack = io.imread(filePath)
 frame01 = inputStack[0, :, :]
@@ -162,8 +162,8 @@ stackFrameNums = int(np.shape(inputStack)[0])
 outputStack = np.zeros((stackFrameNums, output_h, output_w), dtype = np.float32)
 
 for i in range(len(inputStack[:, 0, 0])):
-    fR = np.float32(inputStack[i, :, 0:168])
-    fG = np.float32(inputStack[i, :, 168:337])
+    fR = np.float32(inputStack[i, :, 0:int(output_w/2)])
+    fG = np.float32(inputStack[i, :, int(output_w/2):])
 
     if warpMode == cv2.MOTION_HOMOGRAPHY:
         fG_aligned = cv2.warpPerspective(
@@ -180,8 +180,8 @@ for i in range(len(inputStack[:, 0, 0])):
             flags = cv2.INTER_LINEAR + cv2.WARP_INVERSE_MAP
         )
 
-    outputStack[i, :, 0:168] = fR
-    outputStack[i, :, 168:337] = fG_aligned
+    outputStack[i, :, 0:int(output_w/2)] = fR
+    outputStack[i, :, int(output_w/2):] = fG_aligned
 
 
 
