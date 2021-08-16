@@ -44,8 +44,8 @@ from skimage import io
 '''
 
 #read in .tif stack as numpy.ndarray
-path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//___data//2020-11_data_junM'
-fileName = 'temp27'
+path = ''
+fileName = ''
 filePath = path + '//' + fileName + '.tif'
 inputStack = io.imread(filePath)
 frame01 = inputStack[0, :, :]

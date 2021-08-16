@@ -47,8 +47,8 @@ from skimage import io
 
 
 #read in .tif stack as numpy.ndarray
-path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//___data//2020-11_data_hong'
-fileName = 'MIP_2021-03-26_worm1run3'
+path = ''
+fileName = ''
 filePath = path + '//' + fileName + '.tif'
 inputMIP = io.imread(filePath)
 
@@ -95,7 +95,7 @@ show_image(outputMIP[0])
 
 ##########03 write preprocessed MIP to source dir##############################
 
-titleTemp = path + fileName.split('.')[0] + 'processed.tif'
+titleTemp = path + '//' + fileName + '_processed.tif'
 io.imsave(titleTemp, outputMIP)
 
 

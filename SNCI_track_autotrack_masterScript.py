@@ -49,12 +49,12 @@ from SNCI_track_autotrackGUI import autotrackGUI
 ##########01 define arguments##############################
 
 #define input video for streaming
-path = './JM_areaBasedAlignment_output'
-fileName = 'temp4_aligned'
+path = ''
+fileName = ''
 filePath = path + '//' + fileName + '.avi'
 
 #define neuron ID label for filenaming purposes
-list_neuronID = ['AVG']
+list_neuronID = ['neuron']
 
 #define autotrackGUI constructor arguments
 sizeCoeff = 2
@@ -298,11 +298,12 @@ bp = None
 '''   
 problems
 
-    GUI does not close
-        user needs to click close button on window three times to generate correct file
+    proofreading is too slow
+        change proofreading protocol so less of the video is read / overwritten
+    
 
-    tracker runs slow
-        try enabling GPU on VScode; how to do this? 
+    sizeCoeff has no value
+        please define it as a variable in your autotrackergui class
 
 
 to do; polishing

@@ -206,7 +206,7 @@ class autotrackGUI:
 
             #upsize frame
             self.W = self.frameList[i].shape[1]
-            self.frameList[i] = imutils.resize(self.frameList[i], width = self.W * 2)
+            self.frameList[i] = imutils.resize(self.frameList[i], width = int(self.W * 2)) #!!!
             # self.W = self.frameList[i].shape[1]
             self.H, self.W = self.frameList[i].shape[:2]
             self.H = int(self.H)
@@ -659,29 +659,3 @@ class autotrackGUI:
         self.is_paus = True
         self.vs.release()
         self.root.quit()
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-
-2021-01-30: problems with proofreading / rewinding
-
-    [1] frameIndX is 1 too low by video endpoint
-
-'''
-
-
-
-
-
-
-
