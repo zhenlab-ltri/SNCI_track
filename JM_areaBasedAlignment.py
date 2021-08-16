@@ -44,7 +44,7 @@ from skimage import io
 '''
 
 #read in .tif stack as numpy.ndarray
-path = 'C:/Users/julia/OneDrive/documents/MSc_UToronto_thesis/project_SNCI_pipeline/data/2021-07_data_wesl'
+path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//___data//2020-10_data_wesl'
 fileName = 'temp4'
 filePath = path + '//' + fileName + '.tif'
 inputStack = io.imread(filePath)
@@ -137,14 +137,14 @@ else:
     )
 
 
-#assemble superimposed result
+#assemble superimposed result ("testframe")
 f1G_grnTint_aligned = np.multiply.outer(f1G_f32_aligned, RGB=='G')
 f1G_grnTint_aligned = cv2.normalize(f1G_grnTint_aligned, None, 1, 0, cv2.NORM_MINMAX, cv2.CV_32FC1)
 
 result = f1R_redTint + f1G_grnTint_aligned
 
 
-titleTemp = outputPath + '//' + outputDir + '_t=0001_result.png'
+titleTemp = outputPath + '//' + outputDir + '_t=0000_result.png'
 show_image(result, title='aligned test frame', write=True, fileTitle=titleTemp)
 
 
@@ -214,23 +214,3 @@ io.imsave(titleTemp, outputStack)
 
 
 bp = None
-
-
-
-
-
-
-
-
-
-
-'''
-things to add
-
-polishing
-    [1] rename outputDir from 'testFrameResults' to something like 'JM_areaBasedAlignment_output'
-            here it would be stored alongside the aligned .tif stack
-            here it would be stored in a folder named after the original file name
-
-'''
-
