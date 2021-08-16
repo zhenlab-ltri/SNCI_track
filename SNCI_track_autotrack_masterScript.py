@@ -95,7 +95,7 @@ vs  = cv2.VideoCapture(filePath)
 time.sleep(2.0)
 
 #run SNCI_track's autotracking and proofreading GUI
-gui = autotrackGUI(vs = vs, outputPath = outputPath, strTracker = 'csrt')
+gui = autotrackGUI(vs = vs, outputPath = outputPath, strTracker = 'csrt', sizeCoeff = sizeCoeff)
 gui.root.mainloop()
 
 

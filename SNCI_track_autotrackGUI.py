@@ -79,11 +79,12 @@ class: autotrackGUI
 
 class autotrackGUI:
 
-    def __init__ (self, vs, outputPath, strTracker):
+    def __init__ (self, vs, outputPath, strTracker, sizeCoeff):
         #store video stream object and output path
         self.vs = vs
         self.outputPath = outputPath
         self.strTracker = strTracker
+        self.sizeCoeff = sizeCoeff
 
         #build local tracker dict
         self.OPENCV_OBJECT_TRACKER = {
@@ -206,7 +207,7 @@ class autotrackGUI:
 
             #upsize frame
             self.W = self.frameList[i].shape[1]
-            self.frameList[i] = imutils.resize(self.frameList[i], width = int(self.W * 2)) #!!!
+            self.frameList[i] = imutils.resize(self.frameList[i], width = int(self.W * sizeCoeff))
             # self.W = self.frameList[i].shape[1]
             self.H, self.W = self.frameList[i].shape[:2]
             self.H = int(self.H)
