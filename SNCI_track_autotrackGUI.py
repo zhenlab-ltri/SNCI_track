@@ -629,7 +629,9 @@ class autotrackGUI:
             print('[INFO] proofreading enabled; press s key to open ROI draw tool; press d key to finalize selections')
             
             #delete already-tracked frames after current frame by overwriting from back-up
-            self.frameList[self.frameIndX : len(self.frameList)] = deepcopy(self.frameList_backup[self.frameIndX : len(self.frameList)])
+            self.frameList[self.frameIndX : (self.autotIndX + 1)] = deepcopy(self.frameList_backup[self.frameIndX : (self.autotIndX + 1)])
+            #self.frameList[self.frameIndX : len(self.frameList)] = deepcopy(self.frameList_backup[self.frameIndX : len(self.frameList)])
+            print('wogoahahahah')
 
             #truncate roiCoordList_master to match current position, frameIndX-non-inclusive
             self.roiCoordList_master = self.roiCoordList_master[:self.frameIndX]
