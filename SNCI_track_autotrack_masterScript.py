@@ -19,6 +19,7 @@ import tkinter as tk
 from copy import deepcopy
 import os
 import time
+import csv
 
 
 #third  party imports
@@ -49,8 +50,8 @@ from SNCI_track_autotrackGUI import autotrackGUI
 ##########01 define arguments##############################
 
 #define input video for streaming
-path = ''
-fileName = ''
+path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//___data//2022-07_data_hong'
+fileName = 'worm_001_13971_15200_compressed_flipped'
 filePath = path + '//' + fileName + '.avi'
 
 #define neuron ID label for filenaming purposes
@@ -100,6 +101,12 @@ gui.root.mainloop()
 
 
 roiCoords = gui.roiCoordList_master #each coordList follows [x, y, w, h] pattern
+titleTemp = outputPath + '//roiCoords_XYWH.tsv'
+
+
+with open(titleTemp, 'w', newline='') as f_output:
+    tsv_output = csv.writer(f_output, delimiter='\n')
+    tsv_output.writerow(roiCoords)
 
 
 
@@ -298,10 +305,6 @@ bp = None
 '''   
 problems
 
-    proofreading is too slow
-        change proofreading protocol so less of the video is read / overwritten
-    
-
     sizeCoeff has no value
         please define it as a variable in your autotrackergui class
 
@@ -323,5 +326,3 @@ to do; polishing
 
     figure out how to run .py scripts from GPU / minimise RAM stick usage
 '''
-
-
