@@ -50,8 +50,8 @@ from SNCI_track_autotrackGUI import autotrackGUI
 ##########01 define arguments##############################
 
 #define input video for streaming
-path = 'C://Users//julia//OneDrive//documents//MSc_UToronto_thesis//project_SNCI_pipeline//___data//2022-07_data_hong'
-fileName = 'worm_001_13971_15200_compressed_flipped'
+path = ''
+fileName = ''
 filePath = path + '//' + fileName + '.avi'
 
 #define neuron ID label for filenaming purposes
